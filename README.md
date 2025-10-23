@@ -5,8 +5,8 @@ Each folder corresponds to a major section of the course.
 
 ## Index
 
-- [HTML](./HTML/)
-- [CSS](./CSS/) *(coming soon)*
+- [HTML](./HTML/) Basic HTML, Semantic HTML, Form/Tables, Accesibility.
+- [CSS](./CSS/) Basic CSS.
 - [JavaScript](./JS/) *(coming soon)*
 - [Front End Libraries](./FrontEnd-Libraries/) *(coming soon)*
 - [Python](./Python/) *(coming soon)*
