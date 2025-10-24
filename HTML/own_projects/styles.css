@@ -1,0 +1,45 @@
+body {
+  background-color: #bbdce5;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  max-width: 800px;
+  margin: 20px auto;
+  color:  #333333;
+}
+header {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  margin: 0 5px;
+}
+/* specificity: nav a (only the a of the nav)*/ 
+nav a {
+  color: #7b2424;
+  text-decoration: none;
+}
+
+section {
+  margin-top: 20px;
+  /* padding no admite auto */
+  padding: 0 15px ; 
+}
+article h3{
+  text-align: center;
+  color: #28ae69;
+}
+article +
+article {
+  background-color: #a1dded;
+  padding: 20px;
+}
+.image1 {
+  width: 50%;
+  height: 50%;
+  align-self: rigth;
+}
