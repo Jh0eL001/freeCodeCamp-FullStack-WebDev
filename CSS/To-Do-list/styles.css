@@ -1,0 +1,48 @@
+body {
+  background-color: rgb(207, 230, 235);
+  font-family: sans-serif; /* COMMENT: Adding a default font is good practice. */
+}
+
+.todo-list {
+  list-style-type: georgian;
+}
+
+.sub-item {
+  list-style-type: none;
+  /* COMMENT: Let's remove the default padding that browsers add to lists. */
+  padding-left: 35px; 
+}
+
+/* Base style for the links */
+.sub-item-link {
+  /* REQUIREMENT: Set a custom text color. */
+  color: rgb(19, 180, 22);
+  /* CORRECTION: 'wavy' is not a valid value. 'none' removes the underline. */
+  text-decoration: none; 
+  /* COMMENT: Transitions make the color changes smooth! */
+  transition: all 0.2s ease-in-out;
+}
+
+/* REQUIREMENT: Style for links that have already been visited. */
+.sub-item-link:visited {
+  color: brown;
+}
+
+/* REQUIREMENT: Style for when the mouse is hovering over the link. */
+.sub-item-link:hover {
+  color: rgb(40, 75, 212);
+  /* COMMENT: It's common to add the underline back on hover for clarity. */
+  text-decoration: underline;
+}
+
+/* REQUIREMENT: Style for when the link is focused (e.g., using the Tab key). */
+.sub-item-link:focus {
+  /* This adds a colored outline for accessibility, so keyboard users know where they are. */
+  outline: 2px solid rgb(203, 31, 154);
+  border-radius: 5px; /* This makes the outline look a little softer. */
+}
+
+/* REQUIREMENT: Style for when the link is actively being clicked. */
+.sub-item-link:active {
+  color: rgb(255, 20, 20); /* A bright color for the moment of the click. */
+}
