@@ -1,52 +1,123 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Burbank Big Condensed Bold', Arial, sans-serif;
+  color: #ececec;
+
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%; /* Hacemos el fondo 4 veces más grande para que la animación sea suave */
+  animation: gradientAnimation 15s ease infinite; /* Aplicamos la animación */
 }
 
+
 .blog-post-card {
-  background-color: white;
-  border-radius: 15px;
+  background-color: #2a2a3e; /* Darker background, like weapon rarity colors or shadows */
+  border-radius: 20px; /* Slightly more rounded corners for a modern feel */
   width: 500px;
   margin: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* More pronounced shadow with a subtle blue/purple glow */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 123, 255, 0.6);
   text-align: center;
+  overflow: hidden; /* Ensures content stays within the rounded borders */
+  border: 3px solid #00bfff; /* A vibrant blue border, like a shield potion */
+  transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.blog-post-card:hover {
+  transform: translateY(-10px) scale(1.02); /* Lifts the card and slightly enlarges it on hover */
 }
 
 .post-img {
   width: 100%;
   height: auto;
-  border-bottom: 5px solid #333;
+  /* A more stylized border under the image, perhaps mimicking a health/shield bar */
+  border-bottom: 8px solid #00bfff; /* Vibrant blue for contrast */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  border-top-left-radius: 17px; /* Matches the card's border-radius */
+  border-top-right-radius: 17px;
 }
 
 .post-content {
-  padding: 0 25px 30px;/* 0px top, 25px left/right, 30px bottom */
+  padding: 25px; /* Even padding for a cleaner look */
+  position: relative;
+  z-index: 1;
 }
 
 .post-title {
-  color: rgb(211, 18, 18);
-  margin: 15px;
+  color: #ff4d4d; /* Bright red, like danger or epic loot */
+  margin: 15px 0;
+  text-transform: uppercase; /* Common in game UIs */
+  letter-spacing: 2px; /* Adds a bit more emphasis */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Adds depth to the title */
 }
 
 .post-excerpt {
-  color:rgb(90, 128, 115);
-  margin: 15px;
+  color: #b3e0ff; /* Lighter blue, like a description or common text */
+  margin: 15px 0;
+  line-height: 1.6; /* Improves readability */
 }
 
 .read-more {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #333;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: linear-gradient(
+    to right,
+    #e63946,
+    #c22b2b
+  ); /* Gradient button for a premium feel */
+  color: white;
+  text-decoration: none;
+  border-radius: 30px; /* Pill-shaped button, common in modern UIs */
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out; /* Smooth transitions for hover effects */
+  border: none; /* Remove default button border */
+  cursor: pointer; /* Indicates it's clickable */
 }
 
+.read-more-2 {
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 10px;
+  padding: 12px 25px;
+  background: linear-gradient(
+    to right,
+    #04931a,
+    #1abe17
+  ); /* Gradient button for a premium feel */
+  color: white;
+  text-decoration: none;
+  border-radius: 30px; /* Pill-shaped button, common in modern UIs */
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out; /* Smooth transitions for hover effects */
+  border: none; /* Remove default button border */
+  cursor: pointer; /* Indicates it's clickable */
+}
 .read-more:hover {
-    background-color: #c22b2b;
+  background: linear-gradient(
+    to right,
+    #c22b2b,
+    #e63946
+  ); /* Reverse gradient on hover */
+  transform: scale(1.05); /* Slightly enlarge the button */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.read-more-2:hover {
+  background: linear-gradient(
+    to right,
+    #160229,
+    #6e0e81
+  ); /* Reverse gradient on hover */
+  transform: scale(1.05); /* Slightly enlarge the button */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
