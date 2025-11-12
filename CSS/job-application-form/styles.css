@@ -1,0 +1,51 @@
+input:focus,
+textarea:focus {
+  border-color: tomato;
+}
+
+/* General layout rules first */
+input:first-of-type {
+  border-color: yellowgreen;
+}
+
+/* Then, state-based rules */
+input:focus, 
+textarea:focus {
+  border-color: tomato;
+}
+
+input:invalid,
+select:invalid,
+textarea:invalid {
+  border-color: red;
+}
+
+/* This rule now correctly overrides :first-of-type */
+input:valid,
+select:valid,
+textarea:valid {
+  border-color: green;
+}
+
+button:hover {
+  background-color: lightblue;
+}
+
+.radio-group input[type='radio']:checked {
+  border-color: green;
+  background-color: green;
+  box-shadow: inset 0 0 0 4px white;
+}
+
+input[type="radio"]:checked + label {
+    color: green;
+}
+.radio-group label {
+    margin: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+input:first-of-type {
+  border-color: yellowgreen;
+}
